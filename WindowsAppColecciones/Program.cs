@@ -16,7 +16,7 @@ namespace WindowsAppColecciones
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAutor());
+            Application.Run(new frmEmpleado());
         }
     }
 }
