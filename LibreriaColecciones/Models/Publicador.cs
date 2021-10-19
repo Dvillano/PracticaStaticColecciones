@@ -8,6 +8,8 @@ namespace LibreriaColecciones.Models
 {
     public class Publicador
     {
+        public Publicador() { }
+
         public Publicador(string id, string apellido, string nombre, DateTime fechaNacimiento, string ciudad)
         {
             Id = id;
@@ -22,5 +24,9 @@ namespace LibreriaColecciones.Models
         public string Nombre { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Ciudad { get; set; }
+
+
+
     }
+
 }

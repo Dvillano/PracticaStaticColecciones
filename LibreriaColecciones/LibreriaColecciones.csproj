@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPublicadores\AdminPublicador.cs" />
     <Compile Include="Models\Autor.cs" />
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\Publicador.cs" />

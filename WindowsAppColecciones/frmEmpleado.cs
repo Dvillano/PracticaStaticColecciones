@@ -101,25 +101,34 @@ namespace WindowsAppColecciones
 
         private void eliminarEmpleado()
         {
-            Empleado empleadoRemover = new Empleado();
-
-            foreach (Empleado item in listaEmpleados)
+            if (txtBuscarPoriD.Text == string.Empty)
             {
-                if (item.Id == txtBuscarPoriD.Text)
-                {
-                    empleadoRemover = item;
-                }
-            }
-
-            if (txtBuscarPoriD.Text != string.Empty)
-            {
-                listaEmpleados.Remove(empleadoRemover);
-                MessageBox.Show("Se elimino el empleado de ID: " + empleadoRemover.Id);
-                txtBuscarPoriD.Clear();
+                MessageBox.Show("Debe ingresar un ID");
             }
             else
             {
-                MessageBox.Show("Debe ingresar un ID");
+                Empleado empleadoRemover = new Empleado();
+
+                foreach (Empleado item in listaEmpleados)
+                {
+                    if (item.Id == txtBuscarPoriD.Text)
+                    {
+                        empleadoRemover = item;
+                    }
+                }
+
+                if (empleadoRemover.Id != null)
+                {
+                    listaEmpleados.Remove(empleadoRemover);
+                    MessageBox.Show("Se elimino el empleado de ID: " + empleadoRemover.Id);
+                  
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el empleado");
+                }
+
+                txtBuscarPoriD.Clear();
             }
         }
     }
