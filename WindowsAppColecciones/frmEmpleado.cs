@@ -65,6 +65,12 @@ namespace WindowsAppColecciones
 
         private void btnTraerPorId_Click(object sender, EventArgs e)
         {
+            listarEmpleadosPorId();
+
+        }
+
+        private void listarEmpleadosPorId()
+        {
             if (listaEmpleados != null)
             {
                 foreach (Empleado item in listaEmpleados)
@@ -78,14 +84,43 @@ namespace WindowsAppColecciones
                                         "\nNacionalidad: " + item.Nacionalidad +
                                         "\nCiudad: " + item.Ciudad);
                     }
-                } 
+                }
             }
 
-            if(txtBuscarPoriD.Text == string.Empty)
+            if (txtBuscarPoriD.Text == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un ID");
             }
+        }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            eliminarEmpleado();
+
+        }
+
+        private void eliminarEmpleado()
+        {
+            Empleado empleadoRemover = new Empleado();
+
+            foreach (Empleado item in listaEmpleados)
+            {
+                if (item.Id == txtBuscarPoriD.Text)
+                {
+                    empleadoRemover = item;
+                }
+            }
+
+            if (txtBuscarPoriD.Text != string.Empty)
+            {
+                listaEmpleados.Remove(empleadoRemover);
+                MessageBox.Show("Se elimino el empleado de ID: " + empleadoRemover.Id);
+                txtBuscarPoriD.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar un ID");
+            }
         }
     }
 }

@@ -8,6 +8,8 @@ namespace LibreriaColecciones.Models
 {
     public class Empleado
     {
+        public Empleado() { }
+
         public Empleado(string id, string apellido, string nombre, DateTime fechaNacimiento, string nacionalidad, string ciudad)
         {
             Id = id;

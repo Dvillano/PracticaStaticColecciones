@@ -47,6 +47,7 @@ namespace WindowsAppColecciones
             this.btnGuardarEmpleado = new System.Windows.Forms.Button();
             this.txtBuscarPoriD = new System.Windows.Forms.TextBox();
             this.btnListarEmpleados = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,16 +167,17 @@ namespace WindowsAppColecciones
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(443, 166);
+            this.btnEliminar.Location = new System.Drawing.Point(443, 90);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(187, 23);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardarEmpleado
             // 
-            this.btnGuardarEmpleado.Location = new System.Drawing.Point(443, 208);
+            this.btnGuardarEmpleado.Location = new System.Drawing.Point(149, 235);
             this.btnGuardarEmpleado.Name = "btnGuardarEmpleado";
             this.btnGuardarEmpleado.Size = new System.Drawing.Size(187, 23);
             this.btnGuardarEmpleado.TabIndex = 15;
@@ -192,7 +194,7 @@ namespace WindowsAppColecciones
             // 
             // btnListarEmpleados
             // 
-            this.btnListarEmpleados.Location = new System.Drawing.Point(443, 97);
+            this.btnListarEmpleados.Location = new System.Drawing.Point(443, 235);
             this.btnListarEmpleados.Name = "btnListarEmpleados";
             this.btnListarEmpleados.Size = new System.Drawing.Size(187, 23);
             this.btnListarEmpleados.TabIndex = 17;
@@ -200,11 +202,21 @@ namespace WindowsAppColecciones
             this.btnListarEmpleados.UseVisualStyleBackColor = true;
             this.btnListarEmpleados.Click += new System.EventHandler(this.btnListarEmpleados_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(440, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ID";
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 473);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnListarEmpleados);
             this.Controls.Add(this.txtBuscarPoriD);
             this.Controls.Add(this.btnGuardarEmpleado);
@@ -252,5 +264,6 @@ namespace WindowsAppColecciones
         private System.Windows.Forms.Button btnGuardarEmpleado;
         private System.Windows.Forms.TextBox txtBuscarPoriD;
         private System.Windows.Forms.Button btnListarEmpleados;
+        private System.Windows.Forms.Label label1;
     }
 }
